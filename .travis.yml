@@ -10,13 +10,12 @@ branches:
   - master
 before_script:
   - npm install -g @angular/cli
-script:
-- ng lint
-- ng build --prod --base-href https://github.com/Tortu/Seminario
-
-deploy:
+  deploy:
   provider: firebase
   token:
     secure: $FIREBASE_TOKEN
   project: "reliable-strata-239605"
    message: "PROBANDO"
+script:
+- ng lint
+- ng build --prod --base-href https://github.com/Tortu/Seminario

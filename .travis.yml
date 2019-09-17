@@ -5,6 +5,11 @@ node_js:
   - "10.16.0"
 dist: trusty
 sudo: required
+deploy:
+  provider: firebase
+  token:
+    secure: "$FIREBASE_TOKEN"
+  project: "reliable-strata-239605"
 branches:
   only:
   - master
@@ -12,4 +17,4 @@ before_script:
   - npm install -g @angular/cli
 script:
 - ng lint
-- ng build --prod --base-href https://github.com/Tortu/Seminario
+- ng build --prod --base-href https://github.com/Tortu/

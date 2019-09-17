@@ -13,3 +13,10 @@ before_script:
 script:
 - ng lint
 - ng build --prod --base-href https://github.com/Tortu/Seminario
+
+deploy:
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
+  project: "reliable-strata-239605"
+   message: "PROBANDO"
